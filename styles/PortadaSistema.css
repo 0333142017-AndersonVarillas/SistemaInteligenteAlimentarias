@@ -1,0 +1,184 @@
+/* ---------------------------------------
+   Variables y Paleta
+---------------------------------------- */
+:root{
+    --bg:#f7f9fb;
+    --bg-image: url('images/fondo.jpg'); /* Fondo de pantalla */
+    --card:#ffffff;
+    --primary:#0a2e5d;
+    --accent:#f4a261;
+    --muted:#6b7280;
+    --danger:#e63946;
+    --shadow:0 6px 18px rgba(8,15,25,0.06);
+}
+
+/* ---------------------------------------
+   Reset y box-sizing
+---------------------------------------- */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Inter', system-ui, Arial, Helvetica, sans-serif;
+    background: var(--bg) no-repeat center center fixed;
+    background-size: cover;
+    color: #0f1724;
+    line-height: 1.5;
+}
+
+/* ---------------------------------------
+   Header
+---------------------------------------- */
+.site-header{
+    background: var(--primary);
+    color: #fff;
+    padding: 28px 16px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+.site-header h1{
+    margin:0;
+    font-size: 1.6rem;
+}
+.site-header p{
+    margin-top:6px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ---------------------------------------
+   Container y cards
+---------------------------------------- */
+.container{
+    max-width: 960px;
+    margin: 22px auto;
+    padding: 0 16px;
+}
+.card{
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(8,15,25,0.12);
+}
+.card h2{
+    margin-top:0;
+    color: var(--primary);
+}
+.card h3{
+    color: var(--primary);
+}
+
+/* ---------------------------------------
+   Grid y botones
+---------------------------------------- */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #f1f5f9;
+    color: #0f1724;
+    border: 1px solid rgba(15,23,36,0.06);
+    font-weight: 500;
+    text-align: center;
+    transition: 0.2s;
+}
+.btn:hover{
+    opacity: 0.9;
+}
+.btn.primary{
+    background: var(--primary);
+    color: #fff;
+}
+.btn.danger{
+    background: var(--danger);
+    color: #fff;
+}
+.actions{
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ---------------------------------------
+   Formulario
+---------------------------------------- */
+.form-row{
+    margin-bottom: 14px;
+}
+.question{
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+.radios label{
+    margin-right: 12px;
+}
+input[type=number]{
+    width: 60px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* ---------------------------------------
+   Estado y leyenda
+---------------------------------------- */
+.status-row{
+    padding: 8px 0;
+    border-bottom: 1px dashed #eef2f7;
+}
+.legend{
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.legend .item{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.legend .sw{
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+/* ---------------------------------------
+   Enlaces y retroceso
+---------------------------------------- */
+.back{
+    display:inline-block;
+    margin-bottom: 12px;
+    color: var(--muted);
+}
+.lead{
+    opacity: 0.9;
+}
+
+/* ---------------------------------------
+   Responsive
+---------------------------------------- */
+@media (max-width: 600px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
